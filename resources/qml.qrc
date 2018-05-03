@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file alias="IngredientsList.qml">ingredientslist.qml</file>
+        <file alias="RecipesList.qml">recipeslist.qml</file>
+        <file alias="WeekPlanner.qml">weekplanner.qml</file>
+        <file alias="DayPlanner.qml">dayplanner.qml</file>
+    </qresource>
+</RCC>
