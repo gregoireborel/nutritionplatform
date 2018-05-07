@@ -14,6 +14,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp
+        ingredient.cpp \
+        recipe.cpp
 
 RESOURCES += resources/qml.qrc
 
@@ -27,3 +29,5 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+    ingredient.h \
+    recipe.h
