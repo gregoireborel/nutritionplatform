@@ -5,5 +5,6 @@
         <file alias="RecipesList.qml">recipeslist.qml</file>
         <file alias="WeekPlanner.qml">weekplanner.qml</file>
         <file alias="DayPlanner.qml">dayplanner.qml</file>
+        <file alias="MealPlanner.qml">mealplanner.qml</file>
     </qresource>
 </RCC>
