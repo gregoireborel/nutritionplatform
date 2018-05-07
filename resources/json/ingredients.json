@@ -1,0 +1,21 @@
+{
+    "ingredients":
+    [
+        {
+            "name": "Pâtes",
+            "uom": "g",
+            "quantity": 100,
+            "proteins": 12,
+            "carbohydrates": 68,
+            "lipids": 2
+        },
+        {
+            "name": "Huile d'olive",
+            "uom": "ml",
+            "quantity": 100,
+            "proteins": 0,
+            "carbohydrates": 0,
+            "lipids": 96
+        }
+    ]
+}

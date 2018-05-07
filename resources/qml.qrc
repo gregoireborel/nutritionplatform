@@ -7,4 +7,7 @@
         <file alias="DayPlanner.qml">dayplanner.qml</file>
         <file alias="MealPlanner.qml">mealplanner.qml</file>
     </qresource>
+    <qresource prefix="/json">
+        <file>json/ingredients.json</file>
+    </qresource>
 </RCC>
