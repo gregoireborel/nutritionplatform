@@ -7,8 +7,8 @@ Ingredient::Ingredient(QObject *parent) : QObject(parent)
 {    
 }
 
-Ingredient::Ingredient(const QString& name, const QString& uom, int q, int p, int c, int l) :
-    m_name(name), m_uom(uom), m_quantity(q), m_proteins(p), m_carbohydrates(c), m_lipids(l)
+Ingredient::Ingredient(const QString& name, const QString& uom, int q, int p, int c, int l, QObject* parent) :
+    QObject(parent), m_name(name), m_uom(uom), m_quantity(q), m_proteins(p), m_carbohydrates(c), m_lipids(l)
 {
 }
 

@@ -16,7 +16,7 @@ class Ingredient : public QObject
 
 public:
     explicit Ingredient(QObject* parent = nullptr);
-    Ingredient(const QString&, const QString&, int, int, int, int);
+    Ingredient(const QString&, const QString&, int, int, int, int, QObject* parent = nullptr);
 
     QString name() const;
     void setName(const QString&);
