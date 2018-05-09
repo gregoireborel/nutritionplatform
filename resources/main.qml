@@ -11,19 +11,26 @@ Window {
     IngredientsList
     {
         width: 200
+        anchors.top: parent.top
+        anchors.topMargin: 40
         anchors.left: parent.left
         anchors.leftMargin: 20
     }
 
     WeekPlanner
     {
-        width: 500
+        width: 700
+        height: 500
+        anchors.top: parent.top
+        anchors.topMargin: 40
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
     RecipesList
     {
         width: 200
+        anchors.top: parent.top
+        anchors.topMargin: 40
         anchors.right: parent.right
         anchors.rightMargin: 20
     }
