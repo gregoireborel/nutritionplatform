@@ -26,7 +26,7 @@ bool ApplicationManager::readIngredientsFile(const QString& path)
     return true;
 }
 
-QList<Ingredient*> ApplicationManager::ingredients() const
+QList<QObject*> ApplicationManager::ingredients()
 {
     return m_ingredients;
 }
@@ -53,10 +53,11 @@ void ApplicationManager::write(QJsonObject& json) const
 {
     QJsonArray ingredientArray;
 
-    foreach (const Ingredient* ingredient, m_ingredients)
+    foreach (QObject* ingObj, m_ingredients)
     {
         QJsonObject ingredientObject;
-        ingredient->write(ingredientObject);
+        Ingredient* i = static_cast<Ingredient*>(ingObj);
+        i->write(ingredientObject);
         ingredientArray.append(ingredientObject);
     }
     json["ingredients"] = ingredientArray;

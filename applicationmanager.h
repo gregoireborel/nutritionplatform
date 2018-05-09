@@ -15,13 +15,13 @@ public:
     bool readIngredientsFile(const QString& path = "");
     bool readRecipesFile(const QString& path = "");
 
-    QList<Ingredient*> ingredients() const;
+    QList<QObject*> ingredients();
 
 private:
     void read(const QJsonObject&);
     void write(QJsonObject&) const;
 
-    QList<Ingredient*> m_ingredients;
+    QList<QObject*> m_ingredients;
     QList<Recipe*> m_recipes;
 };
 
