@@ -2,48 +2,29 @@ import QtQuick 2.10
 
 ListView
 {
-    ListModel
-    {
-        id: model
-        ListElement {
-            name:'abc'
-            number:'123'
-        }
-        ListElement {
-            name:'efg'
-            number:'456'
-        }
-        ListElement {
-            name:'xyz'
-            number:'789'
-        }
-    }
-
     id: ingredientsListView
-    model: model
+    model: ingredientsModel
+    anchors.fill: parent
 
-    delegate: Component {
-        Item {
-            width: parent.width
-            height: 40
-            Column {
-                Text { text: 'Name:' + name }
-                Text { text: 'Number:' + number }
-            }
-            MouseArea {
-                anchors.fill: parent
-                onClicked: ingredientsListView.currentIndex = index
-            }
+    delegate: Item
+    {
+        width: 200
+        height: 40
+
+        Text { text: model.modelData.name }
+
+        MouseArea
+        {
+            anchors.fill: parent
+            onClicked: ingredientsListView.currentIndex = index
         }
     }
-    highlight: Rectangle {
+
+    highlight: Rectangle
+    {
         color: 'grey'
-        Text {
-            anchors.centerIn: parent
-            text: 'Hello ' + model.get(ingredientsListView.currentIndex).name
-            color: 'white'
-        }
+        width: 200
     }
     focus: true
-    onCurrentItemChanged: console.log(model.get(ingredientsListView.currentIndex).name + ' selected')
+    //onCurrentItemChanged: console.log(model.get(ingredientsListView.currentIndex).name + ' selected')
 }
